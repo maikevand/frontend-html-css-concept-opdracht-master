@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -13,8 +15,22 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles --------------------------------- */
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Merriweather, Georgia, serif;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
