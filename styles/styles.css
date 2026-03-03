@@ -52,7 +52,20 @@ h1, h2, h3, h4, h5 {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
-
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 24px;
+    padding: 50px;
+    border: 2px dotted mediumpurple;
+}
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -62,6 +75,7 @@ header {
     background: #4845E4;
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
     color: white;
+    padding-bottom: 65px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -80,21 +94,6 @@ header nav {
 header nav a {
     color: white;
     text-decoration: none;
-}
-
-header > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 770px;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    gap: 24px;
-    padding: 100px;
-    border: 2px dotted mediumpurple;
 }
 
 header > div p {
@@ -121,5 +120,24 @@ header > img {
 }
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.introduction h3 {
+    color: var(--purple);
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.intro-link {
+    margin-top: auto;
+    font-size: 14px;
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
