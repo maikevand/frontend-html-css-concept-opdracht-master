@@ -11,7 +11,7 @@
     4. Areas
         4.1 Header
         4.2 Introduction
-        etc.
+        4.3 Projects
     5. Media Queries
 ////////////////////////*/
 
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5 {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
-div {
+.small-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,6 +65,10 @@ div {
     gap: 24px;
     padding: 50px;
     border: 2px dotted mediumpurple;
+}
+
+.wide-section {
+    width: 100vw;
 }
 /* --------------- 3.2 Other --------------------------- */
 
@@ -97,14 +101,14 @@ header nav a {
 }
 
 header > div p {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: normal;
 }
 
 #work-button {
     text-transform: uppercase;
     color: white;
-    font-size: 12px;
+    font-size: 0.8rem;
     padding: 20px 20px;
     border-radius: 50px;
     background-color: var(--pink);
@@ -138,6 +142,48 @@ header > img {
 
 .intro-link {
     margin-top: auto;
-    font-size: 14px;
+    font-size: 0.8rem;
+}
+
+#contact-link {
+    text-decoration: none;
+}
+/* --------------- 4.3 Projects ------------------- */
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: 2px dotted green;
+}
+
+.work:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 300px;
+    min-height: 200px;
+    border: 2px dotted black;
+}
+
+#view-project-link {
+    color: var(--purple);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 /* ------------------------------- 5. Media Queries -------------------------------- */
