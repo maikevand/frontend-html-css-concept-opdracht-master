@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*////////////////////////
-  Table of Contents
-  1. Global Styles
-  2. Typography
-  3. Layout
-    3.1 Reusables
-    3.2 Other
-  4. Areas
-    4.1 Header
-    4.2 Introduction
-    4.3 Projects
-    4.4 Services
-  5. Media Queries
-////////////////////////*/
+/*Table of Contents*/
+/*  1. Global Styles*/
+/*  2. Typography*/
+/*  3. Layout*/
+/*    3.1 Reusables*/
+/*    3.2 Other*/
+/*  4. Areas*/
+/*    4.1 Header*/
+/*    4.2 Introduction*/
+/*    4.3 Projects*/
+/*    4.4 Services*/
+/*    4.5 Footer*/
+/*  5. Media Queries**/
 
 /* ------------------------------- 1. Global Styles --------------------------------- */
 /* CSS Reset */
@@ -71,6 +70,17 @@ h1, h2, h3, h4, h5 {
 .wide-section {
     width: 100vw;
 }
+
+.button {
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.8rem;
+    padding: 20px 20px;
+    border-radius: 50px;
+    background-color: var(--pink);
+    box-shadow: 0 8px 18px rgba(72, 69, 228, 0.14);
+}
+
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
@@ -104,16 +114,6 @@ header nav a {
 header > div p {
     font-size: 1rem;
     font-weight: normal;
-}
-
-#work-button {
-    text-transform: uppercase;
-    color: white;
-    font-size: 0.8rem;
-    padding: 20px 20px;
-    border-radius: 50px;
-    background-color: var(--pink);
-    box-shadow: 0 8px 18px rgba(72, 69, 228, 0.14);
 }
 
 header > img {
@@ -221,6 +221,60 @@ header > img {
 
 .services-cards img {
     max-width: 80px;
+}
+
+/* --------------- 4.4 Contact ------------------- */
+
+#contact-section {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
+    color: white;
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border: 2px dotted  yellow;
+}
+
+#contact-section ::placeholder {
+    color: var(--grey);
+    font-size: 0.6rem;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    min-height: 40px;
+}
+
+#send-button {
+    min-width: 140px;
+    align-self: center;
+}
+
+/* --------------- 4.5 Footer  ------------------- */
+footer {
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 12px 0;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

@@ -10,12 +10,12 @@
     <nav>
         <a href="#case-studies">Case Studies</a>
         <a href="#services">Services</a>
-        <a href="#contact-form">Contact Us</a>
+        <a href="#contact-section">Contact Us</a>
     </nav>
     <div class="small-section">
         <h1>Your website is an investment in the success of your business.</h1>
         <p>We are here to help you succeed.</p>
-        <button id="work-button" type="button">Let's work together</button>
+        <button class="button" id="work-button button">Let's work together</button>
     </div>
     <img src="assets/squiggle_line_stripe.svg" alt="Streepje en golvend logo"/>
 </header>
@@ -124,8 +124,30 @@
             </article>
         </div>
     </section>
-
-<!--    id=contact nog toevoegen-->
+<section id="contact-section">
+    <div class="small-section">
+        <h1>Let's work together</h1>
+        <p>Have a question? Need a quote? Let us know!</p>
+    <form onsubmit="hier-hebben-we-js-voor-nodig">
+        <div class="field-group">
+        <label for="name-field">Name</label>
+        <input type="text" id="name-field" name="name" placeholder="Name"/>
+        </div>
+        <div class="field-group">
+        <label for="email-field">Email</label>
+        <input type="email" id="email-field" name="email" placeholder="Email"/>
+        </div>
+        <div class="field-group">
+        <label for="message-field">Message</label>
+        <input type="text" id="message-field" name="message" placeholder="Message"/>
+        </div>
+        <button class="button" type="submit" id="send-button">Send</button>
+    </form>
+    </div>
+</section>
 </main>
+<footer>
+    <p>Business website opdracht © NOVI Hogeschool 2022</p>
+</footer>
 </body>
 </html>
