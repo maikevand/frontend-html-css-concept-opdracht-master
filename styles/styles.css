@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -26,11 +27,27 @@
 
 body {
     font-family: Roboto, sans-serif;
+    color: var(--black);
 }
 
 h1, h2, h3, h4, h5 {
     font-family: Merriweather, Georgia, serif;
 }
+
+:root {
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    /*(voor standaard tekst)*/
+    --black: #0C0C0C;
+    /*(voor de grote zwevende woorden, zoals "hello" en "services")*/
+    --light-purple: #F2F0FF;
+    /*(voor de achtergrond van de projecten)*/
+    --light-grey: #F3F6F9;
+    /*(voor de service-tegel tekst)*/
+    --grey: #7A7A7A;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -41,6 +58,67 @@ h1, h2, h3, h4, h5 {
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    padding-right: 24px;
+    border: 2px dotted black;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 24px;
+    padding: 100px;
+    border: 2px dotted mediumpurple;
+}
+
+header > div p {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#work-button {
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    padding: 20px 20px;
+    border-radius: 50px;
+    background-color: var(--pink);
+    box-shadow: 0 8px 18px rgba(72, 69, 228, 0.14);
+}
+
+header > img {
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
 
 /* --------------- 4.2 Introduction ------------------- */
 
