@@ -149,6 +149,7 @@ header > img {
 #contact-link {
     text-decoration: none;
 }
+
 /* --------------- 4.3 Projects ------------------- */
 .work {
     display: flex;
@@ -240,7 +241,7 @@ header > img {
     gap: 20px;
     font-size: 0.7rem;
     font-weight: bold;
-    border: 2px dotted  yellow;
+    border: 2px dotted yellow;
 }
 
 #contact-section ::placeholder {
@@ -278,3 +279,48 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+/*Mobiele telefoons*/
+@media screen and (max-width: 576px) {
+    header nav {
+        font-size: 12px;
+        padding: 12px;
+        justify-content: space-between;
+    }
+
+    .work,
+    .work:nth-child(even) {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .work .image-wrapper {
+        order: 1;
+        flex-basis: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .work .project-text {
+        order: 2;
+        width: 80vw;
+        max-width: none;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards-container {
+        padding: 30px;
+    }
+
+    .services-cards {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: auto;
+        flex-grow: 1;
+        margin: 10px 0;
+    }
+}
