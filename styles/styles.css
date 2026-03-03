@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*////////////////////////
-    Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        4.3 Projects
-    5. Media Queries
+  Table of Contents
+  1. Global Styles
+  2. Typography
+  3. Layout
+    3.1 Reusables
+    3.2 Other
+  4. Areas
+    4.1 Header
+    4.2 Introduction
+    4.3 Projects
+    4.4 Services
+  5. Media Queries
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles --------------------------------- */
@@ -130,7 +131,7 @@ header > img {
     align-items: center;
 }
 
-.introduction h3 {
+.introduction h2 {
     color: var(--purple);
 }
 
@@ -173,7 +174,7 @@ header > img {
     border: 2px dotted black;
 }
 
-#view-project-link {
+.view-project-link {
     color: var(--purple);
     text-transform: uppercase;
     text-decoration: none;
@@ -186,4 +187,40 @@ header > img {
     flex-grow: 0;
     flex-shrink: 1;
 }
+
+/* --------------- 4.4 Services ------------------- */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 80px;
+}
+
+.services-cards {
+    flex-basis: 275px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: 12px;
+    border: 2px solid var(--purple);
+    box-shadow: 10px 10px 5px var(--light-grey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    max-width: 500px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+}
+
+.services-cards h3 {
+    color: #5722CD;
+}
+
+.services-cards img {
+    max-width: 80px;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
