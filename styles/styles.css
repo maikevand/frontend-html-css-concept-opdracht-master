@@ -88,6 +88,7 @@ h1, h2, h3, h4, h5 {
 header {
     background: #4845E4;
     background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
+    /* FEEDBACK TERRI: Tip: ook in gradients kun je je variabelen gebruiken, zoals --blue*/
     color: white;
     padding-bottom: 65px;
     display: flex;
@@ -184,6 +185,8 @@ header > img {
     flex-basis: 800px;
     flex-grow: 0;
     flex-shrink: 3;
+    width: 100%;
+    /* FEEDBACK Terri: Je afbeeldingen schalen nu op desktop niet mee omdat je de afbeelding in de wrapper zelf niet op width=100%; gezet hebt. Dan schalen je afbeeldingen mooi mee met het scherm*/
 }
 
 /* --------------- 4.4 Services ------------------- */
@@ -275,7 +278,8 @@ footer {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
-/*Mobiele telefoons*/
+/*Mobiele telefoons
+FEEDBACK TERRI: Het is niet verplicht, maar het is de moderne standaard om de basis-CSS voor mobiel te schrijven en min-width te gebruiken binnen media queries voor grotere schermen. Mobiel wordt tegenwoordig het meest gebruikt, dus dit is een goede gewoonte om aan te wennen! :)*/
 @media screen and (max-width: 576px) {
     header nav {
         font-size: 12px;
