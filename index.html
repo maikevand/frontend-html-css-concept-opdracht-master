@@ -2,9 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Rekupe</title>
 </head>
 <body>
-
+<header>
+    <nav>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#services">Services</a>
+        <a href="#contact-section">Contact Us</a>
+    </nav>
+    <div class="small-section">
+        <h1>Your website is an investment in the success of your business.</h1>
+        <p>We are here to help you succeed.</p>
+        <!-- FEEDBACK TERRI <h1> gebruiken we vaak eenmalig op een pagina, voor de belangrijkste titel. In dit geval is dat de titel in de <header>. Hier zou <h2> dus wel perfect zijn geweest!-->
+        <button class="button" type="button" id="work-button">Let's work together</button>
+    </div>
+    <img src="assets/squiggle_line_stripe.svg" alt="Streepje en golvend logo"/>
+</header>
+<main>
+    <section class="introduction">
+        <div class="small-section intro-text">
+            <h2>Rekupe is a digital agency in Los Angeles.</h2>
+            <!--FEEDBACK TERRI <h2> elementen gebruiken we meestal als titels van bijvoorbeeld hele sections. Gezien dit meer een samenvattende tekst is van de organisatie, zou ik hier eerder een <h3> of lager voor gebruiken.-->
+            <h2>We use strategic UX, SEO optimization and beautiful visual designs to
+                help your business grow.</h2>
+            <h2>We see every project as a fresh opportunity, pushing ourselves to create new digital
+                experiences.</h2>
+            <p class="intro-link">Have a question? <a id="contact-link" href="/">Click here </a>to contact us!</p>
+        </div>
+    </section>
+    <section>
+        <div class="wide-section">
+            <article id="case-studies" class="work">
+                <div class="project-text">
+                    <h2>Rolling Stone</h2>
+                    <!-- FEEDBACK TERRI: Ik zou ook hier eerder een <h3> of lager gebruiken en <h2> echt reserveren voor section titels, zoals de "Let's work together" onderaan de pagina-->
+                    <img src="assets/squiggle_line.svg" alt="Golvend lijntje"/>
+                    <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
+                        icon.</p>
+                    <a class="view-project-link" href="/">View project</a>
+                </div>
+                <span class="image-wrapper">
+                    <img src="assets/work-image-01.jpeg" alt="Tijdschrift Rolling Stone online"/>
+                    </span>
+            </article>
+            <article class="work">
+                <div class="project-text">
+                    <h2>Variety</h2>
+                    <img src="assets/squiggle_line.svg" alt="Golvend lijntje"/>
+                    <p>Variety is an industry leader for breaking entertainment news, reviews and box office results
+                        with
+                        archive of content dating back to 1905.</p>
+                    <a class="view-project-link" href="/">View project</a>
+                </div>
+                <span class="image-wrapper">
+                    <img src="assets/work-image-02.jpeg" alt="Tijdschrift Variety online"/>
+                    </span>
+            </article>
+            <article class="work">
+                <div class="project-text">
+                    <h2>Worth</h2>
+                    <img src="assets/squiggle_line.svg" alt="Golvend lijntje"/>
+                    <p>A global media platform connecting a community that embraces worth beyond wealth.</p>
+                    <a class="view-project-link" href="/">View project</a>
+                </div>
+                <span class="image-wrapper">
+                    <img src="assets/work-image-03.jpeg" alt="Variety 500"/>
+                    </span>
+            </article>
+        </div>
+    </section>
+    <section>
+        <div id="services" class="cards-container">
+            <article class="services-cards">
+                <img src="assets/icon_web-design.svg" alt="Web ontwerp icoon"/>
+                <h3>Web Design</h3>
+                <p>Good web design is how companies stand out from their competitors. High quality web design leads
+                    to increased user conversion and engagement. Through a proven web design process, we help clients
+                    launch
+                    websites and products that improve on their bottom line.</p>
+            </article>
+            <article class="services-cards">
+                <img src="assets/icon_web-development.svg" alt="Web ontwikkeling icoon"/>
+                <h3>Web Development</h3>
+                <p>Good web design is how companies stand out from their competitors. High quality web design leads
+                    to increased user conversion and engagement. Through a proven web design process, we help clients
+                    launch
+                    websites and products that improve on their bottom line.</p>
+            </article>
+            <article class="services-cards">
+                <img src="assets/icon_ux.svg" alt="Gebruikerservaring icoon"/>
+                <h3>User Experience</h3>
+                <p>In order to build successful products you have to understand the user. We create user
+                    personas, wireframes and prototypes to test with users. This allows us to gather feedback which
+                    helps to
+                    shape the product and can quickly eliminate potential risks – saving you time and money.</p>
+            </article>
+            <article class="services-cards">
+                <img src="assets/icon_graphic-design.svg" alt="Grafisch ontwerp icoon"/>
+                <h3>Logo Design + Branding</h3>
+                <p>Nike, Apple, Coca-Cola, Starbucks. What do all of these brands have in common? Easily
+                    recognizable logos and brand identity. The best brands stand out from the crowd by having a clear
+                    and unique
+                    point of view. We will work with you to understand your vision and help create a unique brand
+                    identity and
+                    style guide for your company.</p>
+            </article>
+            <article class="services-cards">
+                <img src="assets/icon_seo.svg" alt="Zoekresultaat icoon"/>
+                <h3>SEO</h3>
+                <p>Do you want your site to rank higher in search results? Google is constantly changing their
+                    algorithms
+                    for how they rank pages. Don’t worry about constantly playing catch-up. We will make sure your
+                    website it
+                    optimized, providing you the best opportunities for organic search exposure.</p>
+            </article>
+            <article class="services-cards">
+                <img src="assets/icon_copywriting.svg" alt="Copyright icoon"/>
+                <h3>Copy Writing</h3>
+                <p>Brand messaging needs to be clear, direct and easy to understand to be effective. A unique tone
+                    of voice will help you stand out from the crowd and build brand loyalty. We work with you to
+                    establish your
+                    brand bible and ensure your messaging is focused and targeted.</p>
+            </article>
+        </div>
+    </section>
+    <section id="contact-section">
+        <div class="small-section">
+            <h1>Let's work together</h1>
+            <p>Have a question? Need a quote? Let us know!</p>
+            <form onsubmit="hier-hebben-we-js-voor-nodig">
+                <div class="field-group">
+                    <label for="name-field">Name</label>
+                    <!--FEEDBACK TERRI: Voor een berichtenveld is een <textarea> gebruikelijker en gebruiksvriendelijker dan een <input type="text">.-->
+                    <input type="text" id="name-field" name="name" placeholder="Name"/>
+                </div>
+                <div class="field-group">
+                    <label for="email-field">Email</label>
+                    <input type="email" id="email-field" name="email" placeholder="Email"/>
+                </div>
+                <div class="field-group">
+                    <label for="message-field">Message</label>
+                    <input type="text" id="message-field" name="message" placeholder="Message"/>
+                </div>
+                <button class="button" type="submit" id="send-button">Send</button>
+                <!-- FEEDBACK TERRI: Het is best-practice om een button binnen een <form> element het type="submit" attribuut mee te geven. Zo triggert de knop de onsubmit die op het <form> element nu staat bij klikken.-->
+            </form>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Business website opdracht © NOVI Hogeschool 2022</p>
+</footer>
 </body>
 </html>

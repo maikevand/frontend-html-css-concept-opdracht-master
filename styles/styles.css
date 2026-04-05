@@ -1,31 +1,334 @@
-/*////////////////////////
-    Table of Contents
-    1. Global Styles
-    2. Typography
-    3. Layout
-        3.1 Reusables
-        3.2 Other
-    4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
-////////////////////////*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*FEEDBACK TERRI: Top dat je de import helemaal bovenin hebt gezet! Ik zie wel dat het 2 bijna dezelfde imports zijn. Google fonts heeft meestal een optie om twee fonts in één import te kunnen importeren*/
+
+
+/*Table of Contents*/
+/*  1. Global Styles*/
+/*  2. Typography*/
+/*  3. Layout*/
+/*    3.1 Reusables*/
+/*    3.2 Other*/
+/*  4. Areas*/
+/*    4.1 Header*/
+/*    4.2 Introduction*/
+/*    4.3 Projects*/
+/*    4.4 Services*/
+/*    4.5 Footer*/
+/*  5. Media Queries**/
 
 /* ------------------------------- 1. Global Styles --------------------------------- */
+/* CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* ------------------------------- 2. Typography ----------------------------------- */
+/* ------------------------------ 2. Typography ----------------------------------- */
+
+/*FEEDBACK TERRI: Gezien de styling regels die je in body toepast voor de gehele pagina
+gelden, mag je deze onder het kopje Global Styles zetten. Onder Typography
+zetten we dan typografie regels die specifiek bedoelt zijn voor generieke
+typografie, zoals inderdaad headings en paragrafen in het algemeen*/
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--black);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Merriweather, Georgia, serif;
+}
+
+:root {
+    /*FEEDBACK TERRI :root geld ook voor alles in de HTML. Deze mag dus ook naar Global Styles verplaatst worden*/
+    --purple: #5722CD;
+    --blue: #4845E4;
+    --pink: #ED4385;
+    /*(voor standaard tekst)*/
+    --black: #0C0C0C;
+    /*(voor de grote zwevende woorden, zoals "hello" en "services")*/
+    --light-purple: #F2F0FF;
+    /*(voor de achtergrond van de projecten)*/
+    --light-grey: #F3F6F9;
+    /*(voor de service-tegel tekst)*/
+    --grey: #7A7A7A;
+}
+
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+.small-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    gap: 24px;
+    padding: 50px;
+}
+
+.wide-section {
+    width: 100vw;
+}
+
+.button {
+    text-transform: uppercase;
+    color: white;
+    font-size: 0.8rem;
+    padding: 20px 20px;
+    border-radius: 50px;
+    background-color: var(--pink);
+    box-shadow: 0 8px 18px rgba(72, 69, 228, 0.14);
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
 /* --------------- 4.1 Header ------------------------- */
+header {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
+    /* FEEDBACK TERRI: Tip: ook in gradients kun je je variabelen gebruiken, zoals --blue*/
+    color: white;
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 60px;
+    padding: 24px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
+header > div p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+header > img {
+    width: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
 
 /* --------------- 4.2 Introduction ------------------- */
+.introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introduction h2 {
+    color: var(--purple);
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+.intro-link {
+    margin-top: auto;
+    font-size: 0.8rem;
+}
+
+#contact-link {
+    text-decoration: none;
+}
+
+/* --------------- 4.3 Projects ------------------- */
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--light-grey);
+}
+
+.work:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 300px;
+    min-height: 200px;
+}
+
+.view-project-link {
+    color: var(--purple);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.image-wrapper {
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 3;
+    width: 100%;
+    /* FEEDBACK Terri: Je afbeeldingen schalen nu op desktop niet mee omdat je de afbeelding in de wrapper zelf niet op width=100%; gezet hebt. Dan schalen je afbeeldingen mooi mee met het scherm*/
+}
+
+/* --------------- 4.4 Services ------------------- */
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 80px;
+}
+
+.services-cards {
+    flex-basis: 275px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    gap: 12px;
+    border: 2px solid var(--purple);
+    box-shadow: 10px 10px 5px var(--light-grey);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 0.8rem;
+    max-width: 500px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 20px;
+}
+
+.services-cards h3 {
+    color: #5722CD;
+}
+
+.services-cards img {
+    max-width: 80px;
+}
+
+/* --------------- 4.4 Contact ------------------- */
+
+#contact-section {
+    background: #4845E4;
+    background: linear-gradient(90deg, rgba(72, 69, 228, 1) 0%, rgba(87, 34, 205, 1) 50%);
+    color: white;
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+#contact-section ::placeholder {
+    color: var(--grey);
+    font-size: 0.6rem;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.field-group input,
+.field-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    min-height: 40px;
+}
+
+#send-button {
+    min-width: 140px;
+    align-self: center;
+}
+
+/* --------------- 4.5 Footer  ------------------- */
+footer {
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 12px 0;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+/*Mobiele telefoons
+FEEDBACK TERRI: Het is niet verplicht, maar het is de moderne standaard om de basis-CSS voor mobiel te schrijven en min-width te gebruiken binnen media queries voor grotere schermen. Mobiel wordt tegenwoordig het meest gebruikt, dus dit is een goede gewoonte om aan te wennen! :)*/
+@media screen and (max-width: 576px) {
+    header nav {
+        font-size: 12px;
+        padding: 12px;
+        justify-content: space-between;
+    }
+
+    .work,
+    .work:nth-child(even) {
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .work .image-wrapper {
+        order: 1;
+        flex-basis: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .work .project-text {
+        order: 2;
+        width: 80vw;
+        max-width: none;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cards-container {
+        padding: 30px;
+    }
+
+    .services-cards {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: auto;
+        flex-grow: 1;
+        margin: 10px 0;
+    }
+}
