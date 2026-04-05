@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:wght@300;500;700;800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*FEEDBACK TERRI: Top dat je de import helemaal bovenin hebt gezet! Ik zie wel dat het 2 bijna dezelfde imports zijn. Google fonts heeft meestal een optie om twee fonts in één import te kunnen importeren*/
+
 
 /*Table of Contents*/
 /*  1. Global Styles*/
@@ -25,6 +27,11 @@
 
 /* ------------------------------ 2. Typography ----------------------------------- */
 
+/*FEEDBACK TERRI: Gezien de styling regels die je in body toepast voor de gehele pagina
+gelden, mag je deze onder het kopje Global Styles zetten. Onder Typography
+zetten we dan typografie regels die specifiek bedoelt zijn voor generieke
+typografie, zoals inderdaad headings en paragrafen in het algemeen*/
+
 body {
     font-family: Roboto, sans-serif;
     color: var(--black);
@@ -35,6 +42,7 @@ h1, h2, h3, h4, h5 {
 }
 
 :root {
+    /*FEEDBACK TERRI :root geld ook voor alles in de HTML. Deze mag dus ook naar Global Styles verplaatst worden*/
     --purple: #5722CD;
     --blue: #4845E4;
     --pink: #ED4385;

@@ -38,6 +38,7 @@
             <article id="case-studies" class="work">
                 <div class="project-text">
                     <h2>Rolling Stone</h2>
+                    <!-- FEEDBACK TERRI: Ik zou ook hier eerder een <h3> of lager gebruiken en <h2> echt reserveren voor section titels, zoals de "Let's work together" onderaan de pagina-->
                     <img src="assets/squiggle_line.svg" alt="Golvend lijntje"/>
                     <p>You know Rolling Stone. It’s the definitive voice in music, politics and culture. It’s a global
                         icon.</p>
@@ -135,6 +136,7 @@
             <form onsubmit="hier-hebben-we-js-voor-nodig">
                 <div class="field-group">
                     <label for="name-field">Name</label>
+                    <!--FEEDBACK TERRI: Voor een berichtenveld is een <textarea> gebruikelijker en gebruiksvriendelijker dan een <input type="text">.-->
                     <input type="text" id="name-field" name="name" placeholder="Name"/>
                 </div>
                 <div class="field-group">
@@ -146,6 +148,7 @@
                     <input type="text" id="message-field" name="message" placeholder="Message"/>
                 </div>
                 <button class="button" type="submit" id="send-button">Send</button>
+                <!-- FEEDBACK TERRI: Het is best-practice om een button binnen een <form> element het type="submit" attribuut mee te geven. Zo triggert de knop de onsubmit die op het <form> element nu staat bij klikken.-->
             </form>
         </div>
     </section>
